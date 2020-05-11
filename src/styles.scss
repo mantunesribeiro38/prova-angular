@@ -1,2 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.main-wrapper {
+	.add-person {
+		position: absolute;
+		top: 28px;
+		right: 10vw;
+	}
+}
+
+table, .form {
+	margin-left: 10vw;
+	width: 80vw;
+	border: 1px solid grey;
+}
+
+table {
+	margin-top: 70px;
+}
+
+.loading {
+	font-family: Roboto,"Helvetica Neue",sans-serif;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(212, 212, 212, 0.7);
+	z-index: 2;
+}
+
+.form {
+	margin-top: 50px;
+	padding: 16px;
+}
+
+mat-form-field {
+	width: 100%;
+}
+
+mat-form-field.readonly {
+	color: grey;
+}
+
+#buttons {
+	margin-top: 16px;
+	display: flex;
+	justify-content: space-around;
+}
+
+td {
+	font-size: 12px;
+}
+
+.action {
+	color: blue;
+	cursor: pointer;
+}
+
+.action:hover {
+	background-color: aqua;
+}

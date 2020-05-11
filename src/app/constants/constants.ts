@@ -1,0 +1,1 @@
+export const KEY_LENGTH_CEP = 8;

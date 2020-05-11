@@ -1,0 +1,40 @@
+<div class="form" >
+    <form #form="ngForm"  id="test" (ngSubmit)="onSubmit(form)">
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input class="name" matInput [(ngModel)]="person.name" name="name" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>CPF</mat-label>
+            <input type="number" class="cpf" maxlength="11" matInput [(ngModel)]="person.cpf" name="cpf" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Telefone</mat-label>
+            <input type="number" class="phone" matInput [(ngModel)]="person.phone" name="phone" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="email" class="email" [(ngModel)]="person.email" name="email" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>CEP</mat-label>
+            <input type="number" matInput class="cep" [(ngModel)]="person.cep" name="cep" (keyup)="changeCep($event)" required>
+        </mat-form-field>
+        <mat-form-field class="readonly">
+            <mat-label>Estado</mat-label>
+            <input class="state" matInput readonly [(ngModel)]="person.state" name="state" required>
+        </mat-form-field>
+        <mat-form-field class="readonly">
+            <mat-label>Cidade</mat-label>
+            <input class="city" matInput readonly [(ngModel)]="person.city" name="city" required>
+        </mat-form-field>
+        <mat-form-field class="readonly">
+            <mat-label>Rua</mat-label>
+            <input class="street" matInput readonly [(ngModel)]="person.street" name="street" required>
+        </mat-form-field>
+        <div id="buttons">
+            <button class="cancel-button" type="button" (click)="cancel()">Cancelar</button>
+            <button class="save-button" [disabled]="!form.form.valid">Salvar</button>
+        </div>
+    </form>
+</div>
