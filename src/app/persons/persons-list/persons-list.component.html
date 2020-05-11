@@ -1,8 +1,8 @@
 <div class="">
 	<h1>{{title}}</h1>
+	<button class="add-person" [routerLink]="['new']" >Incluir uma nova pessoa</button>
 </div>
 <div class="main-wrapper">
-	<button class="add-person" [routerLink]="['new']" >Incluir uma nova pessoa</button>
 	<table mat-table [dataSource]="persons" *ngIf="persons$ | async as persons ; else loading">
 		<tr mat-header-row *matHeaderRowDef="columns"></tr>
 		<tr mat-row *matRowDef="let myRowData; columns: columns"></tr>

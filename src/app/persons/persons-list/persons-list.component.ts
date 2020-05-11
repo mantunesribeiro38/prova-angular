@@ -39,12 +39,11 @@ export class PersonsListComponent implements OnInit {
 
 			this.personsService.remove(person.id).subscribe(
 			success => {
-				console.log("successDelete", success)
+				console.log("successDelete", success);
+				this.fetchData();
 			  },
 			  error => console.log("error", error)
 			);
-
-			this.fetchData();
 		}
 	}
 

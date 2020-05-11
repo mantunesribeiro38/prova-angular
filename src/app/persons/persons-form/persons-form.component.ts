@@ -20,6 +20,8 @@ export class PersonsFormComponent implements OnInit {
 
 	actionUpdate = false;
 
+	loading
+
 	constructor(
 		private cepService:CepService,
 		private personService:PersonsService,
@@ -74,6 +76,8 @@ export class PersonsFormComponent implements OnInit {
 		if (cep.length == Constants.KEY_LENGTH_CEP) {
 			this.cepService.getCep(cep).then((apiResponse: any) => {
 
+				this.loading = true;
+
 				if (apiResponse.erro) {
 					return alert('Cep não encontrado')
 				}
@@ -89,6 +93,8 @@ export class PersonsFormComponent implements OnInit {
 			}).catch(error => {
 				alert('Erro ao buscar o cep')
 				console.log(error);
+			}).finally( () => {
+				this.loading = false;
 			});
 		}
 	}
@@ -101,5 +107,9 @@ export class PersonsFormComponent implements OnInit {
 			data => this.person = data,
 			error => console.log("error", error)
 		);
+	}
+
+	getPhoneRegex() {
+		return  '/^(\(11\) (9\d{4})-\d{4})|((\(1[2-9]{1}\)|\([2-9]{1}\d{1}\)) [5-9]\d{3}-\d{4})$/';
 	}
 }

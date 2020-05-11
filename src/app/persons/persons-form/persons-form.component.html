@@ -1,36 +1,83 @@
+<div class="loading" *ngIf="loading">Aguarde...</div>
 <div class="form" >
     <form #form="ngForm"  id="test" (ngSubmit)="onSubmit(form)">
         <mat-form-field>
             <mat-label>Nome</mat-label>
-            <input class="name" matInput [(ngModel)]="person.name" name="name" required>
+            <input class="name" #nameInput="ngModel" matInput [(ngModel)]="person.name" name="name" required>
+            <mat-error *ngIf="nameInput?.invalid && (nameInput.dirty || nameInput.touched)">
+                <div *ngIf="nameInput.errors.required">
+                    Nome é requerido.
+                </div>
+            </mat-error>
         </mat-form-field>
         <mat-form-field>
             <mat-label>CPF</mat-label>
-            <input type="number" class="cpf" maxlength="11" matInput [(ngModel)]="person.cpf" name="cpf" required>
+            <input type="number"  class="cpf" #cpfInput="ngModel" maxlength="11" minlength="11" matInput  [(ngModel)]="person.cpf" name="cpf" required>
+
+            <mat-error  *ngIf="cpfInput?.invalid && (cpfInput.dirty || cpfInput.touched)">
+                <div *ngIf="cpfInput.errors.required">
+                    CPF é requerido.
+                </div>
+            </mat-error>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Telefone</mat-label>
-            <input type="number" class="phone" matInput [(ngModel)]="person.phone" name="phone" required>
+            <input type="number" class="phone" #phoneInput="ngModel"  matInput [(ngModel)]="person.phone" name="phone" required>
+            <mat-error *ngIf="phoneInput?.invalid && (phoneInput.dirty || phoneInput.touched)">
+                <div *ngIf="phoneInput.errors.required">
+                    Phone é requerido.
+                </div>
+            </mat-error>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Email</mat-label>
-            <input matInput type="email" class="email" [(ngModel)]="person.email" name="email" required>
+
+            <input matInput placeholder="Email" class="email" required #emailInput='ngModel' name='email' [(ngModel)]='person.email'
+                   email>
+            <mat-error *ngIf="emailInput?.invalid && (emailInput.dirty || emailInput.touched)">
+                <div *ngIf="emailInput.errors.required">
+                    Email é requerido.
+                </div>
+                <div *ngIf="emailInput?.errors?.email">
+                    Email é inválido.
+                </div>
+            </mat-error>
         </mat-form-field>
         <mat-form-field>
             <mat-label>CEP</mat-label>
-            <input type="number" matInput class="cep" [(ngModel)]="person.cep" name="cep" (keyup)="changeCep($event)" required>
+            <input type="number" matInput class="cep" #cepInput='ngModel' [(ngModel)]="person.cep" name="cep" (keyup)="changeCep($event)" required>
+            <mat-error *ngIf="cepInput?.invalid && (cepInput.dirty || cepInput.touched)">
+                <div *ngIf="cepInput.errors.required">
+                    CEP é requerido.
+                </div>
+            </mat-error>
         </mat-form-field>
         <mat-form-field class="readonly">
             <mat-label>Estado</mat-label>
-            <input class="state" matInput readonly [(ngModel)]="person.state" name="state" required>
+            <input class="state" matInput readonly #stateInput='ngModel' [(ngModel)]="person.state" name="state" required>
+            <mat-error *ngIf="stateInput?.invalid && (stateInput.dirty || stateInput.touched)">
+                <div *ngIf="stateInput.errors.required">
+                    Estado é requerido.
+                </div>
+            </mat-error>
         </mat-form-field>
         <mat-form-field class="readonly">
             <mat-label>Cidade</mat-label>
-            <input class="city" matInput readonly [(ngModel)]="person.city" name="city" required>
+            <input class="city" matInput readonly #cityInput='ngModel' [(ngModel)]="person.city" name="city" required>
+            <mat-error *ngIf="cityInput?.invalid && (cityInput.dirty || cityInput.touched)">
+                <div *ngIf="stateInput.errors.required">
+                    Cidade é requerido.
+                </div>
+            </mat-error>
         </mat-form-field>
         <mat-form-field class="readonly">
             <mat-label>Rua</mat-label>
-            <input class="street" matInput readonly [(ngModel)]="person.street" name="street" required>
+            <input class="street" matInput readonly #streetInput='ngModel' [(ngModel)]="person.street" name="street" required>
+            <mat-error *ngIf="streetInput?.invalid && (streetInput.dirty || streetInput.touched)">
+                <div *ngIf="streetInput.errors.required">
+                    Rua é requerido.
+                </div>
+            </mat-error>
         </mat-form-field>
         <div id="buttons">
             <button class="cancel-button" type="button" (click)="cancel()">Cancelar</button>

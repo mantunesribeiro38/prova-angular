@@ -31,7 +31,7 @@ let cepMock:CepMock;
 let personMock:PersonsMock;
 let activatedRoute:ActivatedRouteStub;
 
-describe('PersonsListComponent tests', () => {
+describe('PersonsFormComponent tests', () => {
 
     beforeEach(async(() => {
 

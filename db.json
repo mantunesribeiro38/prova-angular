@@ -24,8 +24,8 @@
     },
     {
       "name": "Maria Flores",
-      "cpf": "83321492075",
-      "phone": "1533283928",
+      "cpf": 1.2333333333333334e+44,
+      "phone": 1.5332839281111112e+51,
       "email": "maria_f@gmail.com",
       "cep": "69906043",
       "state": "AC",
@@ -80,7 +80,7 @@
     {
       "name": "João",
       "cpf": 31213393035,
-      "phone": 1532841040,
+      "phone": 15328410401,
       "email": "joao.c@gmail.com",
       "cep": "79096766",
       "state": "MS",
@@ -98,28 +98,6 @@
       "city": "Campo Grande",
       "street": "Rua Rodolfho José Rospide da Motta",
       "id": 14
-    },
-    {
-      "name": "12321",
-      "cpf": 12321,
-      "phone": 23121232,
-      "email": "maria@email.com",
-      "cep": "39400500",
-      "state": "MG",
-      "city": "Montes Claros",
-      "street": "Rua Samir Guimarães",
-      "id": 15
-    },
-    {
-      "name": "213",
-      "cpf": 1111111111,
-      "phone": 111111111111,
-      "email": "maria@email.com",
-      "cep": "39400500",
-      "state": "MG",
-      "city": "Montes Claros",
-      "street": "Rua Samir Guimarães",
-      "id": 16
     }
   ]
 }
