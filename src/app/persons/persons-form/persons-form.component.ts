@@ -108,8 +108,4 @@ export class PersonsFormComponent implements OnInit {
 			error => console.log("error", error)
 		);
 	}
-
-	getPhoneRegex() {
-		return  '/^(\(11\) (9\d{4})-\d{4})|((\(1[2-9]{1}\)|\([2-9]{1}\d{1}\)) [5-9]\d{3}-\d{4})$/';
-	}
 }
