@@ -21,7 +21,7 @@ Deverá ser realizado um fork deste repositório e no e-mail enviado você dever
 ```
 git clone https://github.com/mantunesribeiro38/prova-angular.git
 
-cd test-dev
+cd prova-angular
 ```
 **Instalando dependências**
 
