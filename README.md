@@ -15,7 +15,7 @@ Deverá ser realizado um fork deste repositório e no e-mail enviado você dever
 
 # Resolução
 
-A seguir é apresentado a proposta da resolução da prova.
+A seguir é apresentado a resolução da prova.
 ## Instalação
 
 **Clone o repositório**
