@@ -12,3 +12,35 @@ Trata-se de um teste bem simples, onde temos um CRUD de usuários e queremos vê
 ## Como será feita a entrega?
 
 Deverá ser realizado um fork deste repositório e no e-mail enviado você deverá responder com o link deste fork.
+
+
+## Instalação
+
+**Clone o repositório**
+
+```
+git clone https://github.com/mantunesribeiro38/test-dev.git
+
+cd test-dev
+```
+**Instalando dependências**
+
+```
+npm install
+
+```
+
+## Comandos úteis
+
+**Inicializar o JSON Server**
+
+
+```
+json-server db.json
+```
+
+**Executar aplicação**
+
+```
+ng serve
+```
