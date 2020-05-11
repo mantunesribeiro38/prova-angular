@@ -19,7 +19,7 @@ Deverá ser realizado um fork deste repositório e no e-mail enviado você dever
 **Clone o repositório**
 
 ```
-git clone https://github.com/mantunesribeiro38/test-dev.git
+git clone https://github.com/mantunesribeiro38/prova-angular.git
 
 cd test-dev
 ```
@@ -43,4 +43,10 @@ json-server db.json
 
 ```
 ng serve
+```
+
+**Executar testes**
+
+```
+npm test
 ```
